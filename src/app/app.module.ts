@@ -5,11 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { EnrolleesComponent } from './component/enrollees/enrollees.component';
 import { EnrolleeComponent } from './component/enrollee/enrollee.component';
 import {HttpClientModule} from '@angular/common/http';
+import { HomeComponent } from './component/home/home.component';
 
 @NgModule({
   declarations: [
     EnrolleesComponent,
-    EnrolleeComponent
+    EnrolleeComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -17,6 +19,6 @@ import {HttpClientModule} from '@angular/common/http';
     HttpClientModule
   ],
   providers: [],
-  bootstrap: [EnrolleesComponent]
+  bootstrap: [HomeComponent]
 })
 export class AppModule { }

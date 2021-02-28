@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-enrollee',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EnrolleeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
   }
 
+  getEnrollee(): void {
+    const id = +this.route.snapshot.paramMap.get('id');
+  }
 }

@@ -11,7 +11,7 @@ body {
 div.table-title {
   display: block;
   margin: auto;
-  max-width: 900px;
+  max-width: 925px;
   padding:5px;
   width: 100%;
 }
@@ -32,7 +32,7 @@ div.table-title {
   border-collapse: collapse;
   height: 320px;
   margin: auto auto 45px auto;
-  max-width: 900px;
+  max-width: 925px;
   padding:5px;
   width: 100%;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
@@ -146,17 +146,8 @@ td.text-right {
   text-align: right;
 }
 
-.status-box {
+.edit-button {
   text-align: center;
-  border-radius: 10px;
-  color: white;
-}
-
-.status-box.active {
-  background: #34bfa3;
-}
-
-.status-box.inactive {
-  background: #f4516b;
+  color: #2568e2;
 }
 
