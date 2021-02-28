@@ -65,7 +65,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "health-care-program-ui:build"
+            "browserTarget": "health-care-program-ui:build",
+            "proxyConfig": "./proxy.conf.json"
           },
           "configurations": {
             "production": {

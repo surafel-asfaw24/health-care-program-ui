@@ -1,1 +1,24 @@
-<p>enrollees works!</p>
+<div class="table-title">
+  <h3>List of Enrollees</h3>
+</div>
+<table class="table-fill">
+  <thead>
+    <tr>
+      <th class="text-left">Id</th>
+      <th class="text-left">Name</th>
+      <th class="text-left">Date of Birth</th>
+      <th class="text-left">Status</th>
+    </tr>
+  </thead>
+  <tbody class="table-hover">
+    <tr *ngFor="let enrollee of enrollees">
+      <td class="text-left">{{enrollee.id}}</td>
+      <td class="text-left">{{enrollee.name}}</td>
+      <td class="text-left">{{enrollee.dateOfBirth | date}}</td>
+      <td class="text-left">
+        <p class="status-box active" *ngIf="enrollee.active">Active</p>
+        <p class="status-box inactive" *ngIf="!enrollee.active">Inactive</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
