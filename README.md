@@ -25,4 +25,6 @@ Then the page will redirect you to the edit form where you can edit information 
 
 ## Edit Specific Enrollee
 
+Use the blue left arrow to return back to the list of enrollees available.
+
 ![Alt text](images/img3.PNG?raw=true "Edit Enrollee")
