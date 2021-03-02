@@ -7,14 +7,19 @@ import {Observable} from 'rxjs';
   providedIn: 'root'
 })
 export class EnrolleeService {
+  baseUrl = 'http://localhost:4200/api';
 
   constructor(private httpClient: HttpClient) { }
 
   getEnrollees(): Observable<Enrollee[]> {
-    return this.httpClient.get<Enrollee[]>('http://localhost:4200/api/enrollees');
+    return this.httpClient.get<Enrollee[]>(`${this.baseUrl}/enrollees`);
   }
 
   getEnrollee(id: string): Observable<Enrollee> {
-    return this.httpClient.get<Enrollee>('http://localhost:4200/api/enrollees/' + id);
+    return this.httpClient.get<Enrollee>(`${this.baseUrl}/enrollees/${id}`);
+  }
+
+  updateEnrollee(enrollee: Enrollee): Observable<Enrollee> {
+    return this.httpClient.put<Enrollee>(`${this.baseUrl}/enrollees/${enrollee.id}`, enrollee);
   }
 }

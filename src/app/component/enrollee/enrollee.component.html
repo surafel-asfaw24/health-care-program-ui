@@ -1,1 +1,47 @@
-<p>enrollee works!</p>
+<div class="table-title">
+  <h3 class="link" routerLink="/"><</h3>
+
+  <h3>Edit Enrollee</h3>
+</div>
+
+<div class="table-fill container">
+  <form *ngIf="enrollee != null && enrolleeForm != null" [formGroup]="enrolleeForm" (ngSubmit)="onSubmit()">
+    <label for="id" class="label-text">Id</label>
+    <input [readOnly]="true" class="disabled-button" type="text" id="id" name="name" placeholder="Your id.." formControlName="id">
+
+    <label for="name" class="label-text">Name</label>
+    <input type="text" id="name" name="name" placeholder="Your name.." formControlName="name">
+    <div class="validation-message" *ngIf="enrolleeForm.controls['name'].errors != null && enrolleeForm.controls['name'].errors.required">
+      Please enter user name!
+    </div>
+
+    <label for="dateOfBirth" class="label-text">Date of Birth</label>
+    <input [readOnly]="true" class="disabled-button" type="text" id="dateOfBirth" name="dateOfBirth" placeholder="Your date of birth.." formControlName="dateOfBirth">
+
+    <label for="status" class="label-text">Status</label>
+    <div id="status">
+      <label>
+        <input type="radio" name="active" formControlName="active" [value]="true"
+               [checked]="enrollee.active == true"/>Active
+      </label>
+      <label>
+        <input type="radio" name="active" formControlName="active" [value]="false"
+               [checked]="enrollee.active == false"/>Inactive
+      </label>
+    </div>
+
+    <input id="submit-button" type="submit" [disabled]="!enrolleeForm.valid" value="Submit">
+
+    <div *ngIf="successMessage != null" class="message-success">
+      {{successMessage}}
+    </div>
+
+    <div *ngIf="errorMessage != null" class="message-error">
+      {{errorMessage}}
+    </div>
+  </form>
+</div>
+
+<div *ngIf="enrollee == null || enrolleeForm == null">
+  <p>No data to display!</p>
+</div>

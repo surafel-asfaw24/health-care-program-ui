@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100');
+
+body {
+  background-color: #3e94ec;
+  font-family: 'Roboto', helvetica, arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+}
+
+div.table-title {
+  margin: auto;
+  max-width: 925px;
+  padding:5px;
+  width: 100%;
+  display: flex;
+
+  .link {
+    margin-right: 10px;
+    cursor: pointer;
+    color: #0075ff;
+  }
+}
+
+.table-title h3 {
+  color: #000;
+  font-size: 30px;
+  font-weight: 400;
+  font-style:normal;
+  font-family: "Roboto", helvetica, arial, sans-serif;
+  text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+  text-transform:uppercase;
+}
+
+.table-fill {
+  border-collapse: collapse;
+  margin: auto auto 45px auto;
+  max-width: 925px;
+  width: 100%;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  animation: float 5s infinite;
+  border-radius: 5px;
+  background-color: #EBEBEB;
+  padding: 20px;
+}
+
+.label-text {
+  color:#000;
+  font-size:23px;
+  font-weight: 100;
+  text-align:left;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  vertical-align:middle;
+}
+
+#status {
+  margin-bottom: 25px;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #22262e;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #4e5066;
+}
+
+.message-success{
+  background: #12805c;
+  padding: 13px;
+  border-radius: 5px;
+  color: white;
+  margin-top: 25px;
+}
+
+.message-error {
+  background: #c9252d;
+  padding: 13px;
+  border-radius: 5px;
+  color: white;
+  margin-top: 25px;
+}
+
+.disabled-button {
+  background: darkgray;
+}
+
+.validation-message {
+  color: red;
+  margin: 0px 0 15px 0;
+}

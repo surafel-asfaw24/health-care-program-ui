@@ -6,6 +6,7 @@ import { EnrolleesComponent } from './component/enrollees/enrollees.component';
 import { EnrolleeComponent } from './component/enrollee/enrollee.component';
 import {HttpClientModule} from '@angular/common/http';
 import { HomeComponent } from './component/home/home.component';
+import {ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { HomeComponent } from './component/home/home.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [HomeComponent]
